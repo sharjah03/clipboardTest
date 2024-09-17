@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
-    <!-- <meta charset="UTF-8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Clipboard Test</title> -->
+    <title>Clipboard Test</title>
   <body>
     <h1>Clipboard Test Page</h1>
     <button onclick="readClipboard()" style="background-color: bisque;">Read Clipboard</button>
@@ -21,7 +21,7 @@
 
       async function writeClipboard() {
         try {
-          await navigator.clipboard.writeText('Hello from iframe!');
+          await navigator.clipboard.writeText('Hello World');
           alert('Text copied to clipboard!');
         } catch (err) {
           console.error('Failed to write to clipboard: ', err);
