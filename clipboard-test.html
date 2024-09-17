@@ -8,6 +8,35 @@
     
   <body>
     <h1>Clipboard Test Page</h1>
+    <button onclick="readClipboard()" style="background-color: bisque; padding: 10px; font-size: 16px;">Read Clipboard</button>
+    <button onclick="writeClipboard()" style="background-color: cadetblue; padding: 10px; font-size: 16px;">Write to Clipboard</button>
+    <p id="clipboard-content">Clipboard Content: </p>
+
+    <script>
+      console.log('Script loaded');
+
+      function readClipboard() {
+        console.log('Read Clipboard button clicked');
+      }
+
+      function writeClipboard() {
+        console.log('Write Clipboard button clicked');
+      }
+    </script>
+  </body>
+</html>
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clipboard Test</title>
+  </head>
+    
+  <body>
+    <h1>Clipboard Test Page</h1>
     <button onclick="readClipboard()" style="background-color: bisque;">Read Clipboard</button>
     <button onclick="writeClipboard()" style="background-color: cadetblue;">Write to Clipboard</button>
     <p id="clipboard-content">Clipboard Content: </p>
@@ -34,4 +63,4 @@
       }
     </script>
   </body>
-</html>
+</html> -->
