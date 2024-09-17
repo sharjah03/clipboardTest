@@ -13,6 +13,8 @@
     <p id="clipboard-content">Clipboard Content: </p>
 
     <script>
+      console.log('check if in');
+
       async function readClipboard() {
         try {
           const text = await navigator.clipboard.readText();
