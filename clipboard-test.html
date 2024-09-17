@@ -1,34 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Clipboard Test</title>
-</head>
-<body>
-  <h1>Clipboard Test Page</h1>
-  <button onclick="readClipboard()">Read Clipboard</button>
-  <button onclick="writeClipboard()">Write to Clipboard</button>
-  <p id="clipboard-content">Clipboard Content: </p>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clipboard Test</title>
+  </head>
+  <body>
+    <h1>Clipboard Test Page</h1>
+    <button onclick="readClipboard()" style="background-color: bisque;">Read Clipboard</button>
+    <button onclick="writeClipboard()" style="background-color: cadetblue;">Write to Clipboard</button>
+    <p id="clipboard-content">Clipboard Content: </p>
 
-  <script>
-    async function readClipboard() {
-      try {
-        const text = await navigator.clipboard.readText();
-        document.getElementById('clipboard-content').innerText = 'Clipboard Content: ' + text;
-      } catch (err) {
-        console.error('Failed to read clipboard contents: ', err);
+    <script>
+      async function readClipboard() {
+        try {
+          const text = await navigator.clipboard.readText();
+          document.getElementById('clipboard-content').innerText = 'Clipboard Content: ' + text;
+        } catch (err) {
+          console.error('Failed to read clipboard contents: ', err);
+        }
       }
-    }
 
-    async function writeClipboard() {
-      try {
-        await navigator.clipboard.writeText('Hello from iframe!');
-        alert('Text copied to clipboard!');
-      } catch (err) {
-        console.error('Failed to write to clipboard: ', err);
+      async function writeClipboard() {
+        try {
+          await navigator.clipboard.writeText('Hello from iframe!');
+          alert('Text copied to clipboard!');
+        } catch (err) {
+          console.error('Failed to write to clipboard: ', err);
+        }
       }
-    }
-  </script>
-</body>
+    </script>
+  </body>
 </html>
